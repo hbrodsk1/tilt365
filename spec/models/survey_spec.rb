@@ -8,17 +8,26 @@ RSpec.describe Survey, type: :model do
 
   context 'Validations' do
   	it { is_expected.to validate_presence_of(:annual_revenue) }
-	it { is_expected.to validate_presence_of(:number_of_employees) }
-	it { is_expected.to validate_presence_of(:annual_hours_per_employee) }
-	it { is_expected.to validate_presence_of(:incivility) }
-	it { is_expected.to validate_presence_of(:high_engagement) }
-	it { is_expected.to validate_presence_of(:destructive_leadership) }
-	it { is_expected.to validate_presence_of(:constructive_leadership) }
-	it { is_expected.to validate_presence_of(:additional_rocs_investment) }
+  	it { is_expected.to validate_presence_of(:number_of_employees) }
+  	it { is_expected.to validate_presence_of(:annual_hours_per_employee) }
+  	it { is_expected.to validate_presence_of(:incivility) }
+  	it { is_expected.to validate_presence_of(:high_engagement) }
+  	it { is_expected.to validate_presence_of(:destructive_leadership) }
+  	it { is_expected.to validate_presence_of(:constructive_leadership) }
+  	it { is_expected.to validate_presence_of(:additional_rocs_investment) }
 
-	it { is_expected.to validate_numericality_of(:incivility).is_greater_than_or_equal_to(0).is_less_than_or_equal_to(100) }
-	it { is_expected.to validate_numericality_of(:destructive_leadership).is_greater_than_or_equal_to(0).is_less_than_or_equal_to(100) }
-	it { is_expected.to validate_numericality_of(:constructive_leadership).is_greater_than_or_equal_to(0).is_less_than_or_equal_to(100) }
+    it { is_expected.to validate_numericality_of(:annual_revenue) }
+    it { is_expected.to validate_numericality_of(:number_of_employees) }
+    it { is_expected.to validate_numericality_of(:annual_hours_per_employee) }
+    it { is_expected.to validate_numericality_of(:incivility) }
+    it { is_expected.to validate_numericality_of(:high_engagement) }
+    it { is_expected.to validate_numericality_of(:destructive_leadership) }
+    it { is_expected.to validate_numericality_of(:constructive_leadership) }
+    it { is_expected.to validate_numericality_of(:additional_rocs_investment) }
+    
+  	it { is_expected.to validate_numericality_of(:incivility).is_greater_than_or_equal_to(0).is_less_than_or_equal_to(100) }
+  	it { is_expected.to validate_numericality_of(:destructive_leadership).is_greater_than_or_equal_to(0).is_less_than_or_equal_to(100) }
+  	it { is_expected.to validate_numericality_of(:constructive_leadership).is_greater_than_or_equal_to(0).is_less_than_or_equal_to(100) }
   end
 
   before(:each) do

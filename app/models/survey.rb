@@ -1,7 +1,7 @@
 class Survey < ApplicationRecord
 	validates :annual_revenue, :number_of_employees, :annual_hours_per_employee, 
 				:incivility, :high_engagement, :destructive_leadership,
-				:constructive_leadership, :additional_rocs_investment, presence: true
+				:constructive_leadership, :additional_rocs_investment, presence: true, numericality: true
 	validates :incivility, :high_engagement, :destructive_leadership, :constructive_leadership, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 100 }
 
 	def calculate		
