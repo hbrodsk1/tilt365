@@ -15,6 +15,10 @@ RSpec.describe Survey, type: :model do
 	it { is_expected.to validate_presence_of(:destructive_leadership) }
 	it { is_expected.to validate_presence_of(:constructive_leadership) }
 	it { is_expected.to validate_presence_of(:additional_rocs_investment) }
+
+	it { is_expected.to validate_numericality_of(:incivility).is_greater_than_or_equal_to(0).is_less_than_or_equal_to(100) }
+	it { is_expected.to validate_numericality_of(:destructive_leadership).is_greater_than_or_equal_to(0).is_less_than_or_equal_to(100) }
+	it { is_expected.to validate_numericality_of(:constructive_leadership).is_greater_than_or_equal_to(0).is_less_than_or_equal_to(100) }
   end
 
   before(:each) do

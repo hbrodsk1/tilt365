@@ -11,7 +11,7 @@
 	  		<div class="calculated-result"> $<%= number_with_precision(@survey[:incivility_cost], precision: 2, delimiter: ',') %> </div>
 
 	  		<h5 class="result-title">Total Investment</h5>
-			<div class="calculated-result"> $<%= number_with_precision(@survey[:cs_investment], precision: 2, precision: 2, delimiter: ',') %> </div>
+			<div class="calculated-result"> $<%= number_with_precision(@survey[:cs_investment], precision: 2, delimiter: ',') %> </div>
 
 			<h5 class="result-title">Approximate ROI (%)</h5>
 			<div class="calculated-result"> <%= number_with_precision(@survey[:roi], precision: 2) %>% </div>

@@ -6,11 +6,13 @@ class SurveysController < ApplicationController
 
 	def create
 		@survey = Survey.new(survey_params)
-		@survey.calculate
+		
 		if @survey.save
-			
+			@survey.calculate
+			@survey.update(survey_params)
 			redirect_to(@survey)
 		else
+			flash.now[:error] = "Please make sure all fields are filled out"
 			render 'new'
 		end
 	end
@@ -27,6 +29,7 @@ class SurveysController < ApplicationController
 			@survey.update(survey_params)
 			redirect_to(@survey)
 		else
+			flash.now[:error] = "Please make sure all fields are filled out"
 			render 'edit'
 		end
 	end
