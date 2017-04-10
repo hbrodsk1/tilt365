@@ -1,0 +1,83 @@
+<div class="survey-form-container col-md-6 col-md-offset-3">
+	<%= form_for @survey, url: {action: "create"} do |f| %>
+	  <div class="logo-image col-md-6 col-md-offset-4">
+	  	<%= image_tag "/assets/logo.jpg", class: "logo" %>
+	  </div>
+
+	  <div class="form-group row">
+	  	<div class="col-md-4">
+	  		<%= f.label :annual_revenue, 'Annual Revenue', class: "col-form-label" %><br />
+	  	</div>
+	  	<div class="col-md-7">
+	  		<%= f.text_field :annual_revenue, class: "form-control" %><br />
+	  	</div>
+	  </div>
+
+	  <div class="form-group row">
+	  	<div class="col-md-4">
+	  		<%= f.label :number_of_employees, 'Number of Employees', class: "col-form-label" %><br />
+	  	</div>
+	  	<div class="col-md-7">
+	  		<%= f.text_field :number_of_employees, class: "col-md-6 form-control" %><br />
+	  	</div>
+	  </div>
+
+	  <div class="form-group row">
+	  	<div class="col-md-4">
+	  		<%= f.label :annual_hours_per_employee, 'Annual Hours per Employee', class: "col-form-label" %><br />
+	  	</div>
+	  	<div class="col-md-7">
+	  		<%= f.text_field :annual_hours_per_employee, class: "col-md-6 form-control" %><br />
+	  	</div>
+	  </div>
+
+	  <div class="form-group row">
+	  	<div class="col-md-4">
+	  		<%= f.label :incivility, 'Incivility', class: "col-form-label" %><br />
+	  	</div>
+	  	<div class="col-md-7">
+	  		<%= f.text_field :incivility, class: "col-md-6 form-control" %><br />
+	  	</div>
+	  </div>
+
+	  <div class="form-group row">
+	  	<div class="col-md-4">
+	  		<%= f.label :high_engagement, 'High Engagement', class: "col-form-label" %><br />
+	  	</div>
+	  	<div class="col-md-7">
+	  		<%= f.text_field :high_engagement, class: "col-md-6 form-control" %><br />
+	  	</div>
+	  </div>
+
+	  <div class="form-group row">
+	  	<div class="col-md-4">
+	  		<%= f.label :destructive_leadership, 'Destructive Leadership', class: "col-form-label" %><br />
+	  	</div>
+	  	<div class="col-md-7">
+	  		<%= f.text_field :destructive_leadership, class: "col-md-6 form-control" %><br />
+	  	</div>
+	  </div>
+
+	  <div class="form-group row">
+	  	<div class="col-md-4">
+	  		<%= f.label :constructive_leadership, 'Constructive Leadership', class: "col-form-label" %><br />
+	  	</div>
+	  	<div class="col-md-7">
+	  		<%= f.text_field :constructive_leadership, class: "col-md-6 form-control" %><br />
+	  	</div>
+	  </div>
+
+	  <div class="form-group row">
+	  	<div class="col-md-4">
+	  		<%= f.label :additional_rocs_investment, 'Additional ROCS Investment', class: "col-form-label" %><br />
+	  	</div>
+	  	<div class="col-md-7">
+	  		<%= f.text_field :additional_rocs_investment, class: "col-md-6 form-control" %><br />
+	  	</div>
+	  </div>
+
+	  <div class="form-group row">
+	  	<%= f.submit "Calculate Your Return", class: "btn btn-success survey-submit col-md-6 col-md-offset-3" %>
+	  </div>
+	<% end %>
+</div>
