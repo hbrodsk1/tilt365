@@ -18,7 +18,30 @@
 		}
 	}
 	.form-group {
-		margin-bottom: 1.3em;
+		margin-bottom: 1.2em;
+		.label-container {
+			margin-right: 3em;
+		}
+		.col-form-label {
+			margin-right: 1em;
+			&:after {
+				background-color: #eeeeee;
+				border-radius: 50%;
+				border: 1px solid black;
+				padding-left: 0.4em;
+				padding-right: 0.4em;
+        		content: "?";
+        		margin-left: 1em;
+        	}
+        	&:hover:after {
+        		background-color: #d7d7d7;
+       		}
+		}
+		.input-group-addon {
+		}
+	}
+	.form-group-right {
+		text-align: right;
 	}
 	.survey-submit {
 		margin-top: 2em;
@@ -39,25 +62,52 @@
 			height: 5em;
 		}
 	}
-	.summary-title {
-		margin-bottom: 2em;
+	.return-summary-container {
+		border: 1px solid black;
+		border-bottom: 0;
+		.summary-title {
+			margin-bottom: 2em;
+		}
+		.result-title {
+			font-size: 1.1em;
+			text-decoration: underline;
+		}
+		.calculated-result {
+			margin-bottom: 2em;
+			font-weight: bold;
+			border-bottom: 1px solid black;
+		}
+		.recalculate-button {
+			float: left;
+			margin-bottom: 2em;
+			margin-top: 1em;
+		}
+		.new-return-button {
+			margin-bottom: 2em;
+			margin-top: 1em;
+		}
 	}
-	.result-title {
-		font-size: 1.1em;
-		text-decoration: underline;
-	}
-	.calculated-result {
-		margin-bottom: 2em;
-		font-weight: bold;
-		border-bottom: 1px solid black;
-	}
-	.recalculate-button {
-		float: left;
-		margin-bottom: 2em;
-		margin-top: 3em;
-	}
-	.new-return-button {
-		margin-bottom: 2em;
-		margin-top: 3em;
+
+	.return-details-container {
+		border: 1px solid black;
+		border-left: 0;
+		border-right: 0;
+		padding: 0;
+		.return-details-title {
+			margin-bottom: 2em;
+		}
+		.detail-title {
+			font-size: 1.1em;
+			text-decoration: underline;
+		}
+		.calculated-detail {
+			margin-bottom: 2em;
+			font-weight: bold;
+			border-bottom: 1px solid black;
+		}
+		.incivility-cost-container {
+			border: 1px solid black;
+			
+		}
 	}
 }

@@ -4,7 +4,7 @@
 	</div>
 
 	<div class="results row">
-	  	<div class="col-md-6 col-md-offset-3">
+	  	<div class="return-summary-container col-md-6 col-md-offset-3">
 	  		<h3 class="summary-title">Your ROI Summary</h3>
 
 	  		<h5 class="result-title">Total Annual Costs</h5>
@@ -18,12 +18,49 @@
 
 			<h5 class="result-title">Payback Period (months)</h5>
 			<div class="calculated-result"> <%= number_with_precision(@survey[:payback_period], precision: 0) %> </div>
+
+			<%= link_to 'Recalculate Your Return', edit_survey_path(@survey), class: "btn btn-primary recalculate-button" %>
+			<%= link_to 'Calculate A New Return', new_survey_path, class: "btn btn-warning new-return-button" %>
 	  	</div>
 	</div>
 
-	<%= link_to 'Recalculate Your Return', edit_survey_path(@survey), class: "btn btn-primary recalculate-button col-md-offset-2" %>
-	<%= link_to 'Calculate A New Return', new_survey_path, class: "btn btn-warning new-return-button col-md-offset-1" %>
-	
+	<div class="results row">
+	  	<div class="return-details-container col-md-12">
+	  		<h2 class="return-details-title">The Details</h2>
+
+	  		<div class="incivility-cost-container col-md-6">
+		  		<h3 class="return-details-title">Incivility Costs</h3>
+
+		  		<h5 class="detail-title">Number of employees each year who directly experience incivility once per year</h5>
+		  		<div class="calculated-detail"> $<%= number_with_precision(@survey[:incivility_cost], precision: 2, delimiter: ',') %> </div>
+
+		  		<h5 class="detail-title">Total Investment</h5>
+				<div class="calculated-detail"> $<%= number_with_precision(@survey[:cs_investment], precision: 2, delimiter: ',') %> </div>
+
+				<h5 class="detail-title">Approximate ROI (%)</h5>
+				<div class="calculated-detail"> <%= number_with_precision(@survey[:roi], precision: 2) %>% </div>
+
+				<h5 class="detail-title">Payback Period (months)</h5>
+				<div class="calculated-detail"> <%= number_with_precision(@survey[:payback_period], precision: 0) %> </div>
+			</div>
+
+			<div class="incivility-cost-container col-md-6">
+		  		<h3 class="return-details-title">Incivility Costs</h3>
+
+		  		<h5 class="detail-title">Total Annual Costs</h5>
+		  		<div class="calculated-detail"> $<%= number_with_precision(@survey[:incivility_cost], precision: 2, delimiter: ',') %> </div>
+
+		  		<h5 class="detail-title">Total Investment</h5>
+				<div class="calculated-detail"> $<%= number_with_precision(@survey[:cs_investment], precision: 2, delimiter: ',') %> </div>
+
+				<h5 class="detail-title">Approximate ROI (%)</h5>
+				<div class="calculated-detail"> <%= number_with_precision(@survey[:roi], precision: 2) %>% </div>
+
+				<h5 class="detail-title">Payback Period (months)</h5>
+				<div class="calculated-detail"> <%= number_with_precision(@survey[:payback_period], precision: 0) %> </div>
+			</div>
+	  	</div>
+	</div>	
 </div>
 
 
