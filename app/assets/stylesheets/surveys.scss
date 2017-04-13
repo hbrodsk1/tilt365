@@ -54,6 +54,7 @@
 	border: 1px solid black;
 	border-radius: 2px;
 	margin-top: 2em;
+	margin-bottom: 3em;
 	padding-top: 0.5em;
 	text-align: center;
 	.logo-image {
@@ -67,6 +68,7 @@
 		border-bottom: 0;
 		.summary-title {
 			margin-bottom: 2em;
+			text-decoration: underline;
 		}
 		.result-title {
 			font-size: 1.1em;
@@ -85,6 +87,7 @@
 		.new-return-button {
 			margin-bottom: 2em;
 			margin-top: 1em;
+			float: right;
 		}
 	}
 
@@ -95,10 +98,26 @@
 		padding: 0;
 		.return-details-title {
 			margin-bottom: 2em;
+			text-decoration: underline;
 		}
 		.detail-title {
 			font-size: 1.1em;
 			text-decoration: underline;
+			&:after {
+				display: inline-block;
+				background-color: #eeeeee;
+				border-radius: 50%;
+				border: 1px solid black;
+				padding-left: 0.4em;
+				padding-right: 0.4em;
+        		content: "?";
+        		font-size: 0.7em;
+        		margin-left: 0.6em;
+        		text-decoration: none;
+        	}
+        	&:hover:after {
+        		background-color: #d7d7d7;
+       		}
 		}
 		.calculated-detail {
 			margin-bottom: 2em;
@@ -106,8 +125,14 @@
 			border-bottom: 1px solid black;
 		}
 		.incivility-cost-container {
-			border: 1px solid black;
-			
+			border-top: 1px solid black;
+			border-right: 1px solid black;
+		}
+		.engagement-leadership-cost-container {
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;		
+		}
+		.cs-investment-container {
 		}
 	}
 }

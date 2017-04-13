@@ -1,0 +1,15 @@
+<div class="cs-investment-container col-md-6">
+	<h3 class="return-details-title">CS Investment</h3>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="True Tilt Profile ($39 for 100% of employees)">True Tilt Profile</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:true_tilt_profile], precision: 2, delimiter: ',') %> </div>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="Tilt 365 Assessment (Additional $160 for 20% of employees - leaders, managers, high potentials, etc.)">Tilt 365 Assessment</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:tilt_365_assessment], precision: 2, delimiter: ',') %> </div>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="True Tilt Team Profile ($99; assumes 15 employees per team)">True Tilt Team Profile</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:true_tilt_team_profile], precision: 2) %></div>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="Tilt 365 Debriefs ($350; assumes debrief for 100% of Tilt 365)">Tilt 365 Debriefs</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:tilt_365_debriefs], precision: 2) %></div>
+</div>

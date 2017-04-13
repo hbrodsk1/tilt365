@@ -1,0 +1,27 @@
+<div class="incivility-cost-container col-md-6">
+	<h3 class="return-details-title">Incivility Costs</h3>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="Number of employees each year who directly experience incivility once per year">Number of employees experiencing incivility</h5>
+	<div class="calculated-detail"><%= number_with_precision(@survey[:employees_experiencing_incivility], precision: 0, delimiter: ',') %> </div>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="Cost of employees who will use work time worrying about the incident and future interaction with the offender">Cost of Time Worrying</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_time_worrying], precision: 2, delimiter: ',') %> </div>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="Cost of employees who will lose work time trying to avoid the offender">Cost of Avoidance</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_avoidance], precision: 2) %> </div>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="Cost of employees who will experience a weakened sense of organizational commitment">Cost of Weakened Commitment</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_weak_commitment], precision: 0) %> </div>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="Cost of employees who will intentionally reduce their efforts at work">Cost of Effort Reduction</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_effort_reduction], precision: 2, delimiter: ',') %> </div>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="Cost of employees who will intentionally decrease the amount of time they spend a work">Cost of Decreased Work Time</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_decreased_work_time], precision: 2, delimiter: ',') %> </div>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="Cost of employees who will think about changing jobs">Cost of Time Spent Thinking about Changing Jobs</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_job_change_thoughts], precision: 2) %></div>
+
+	<h5 class="detail-title" data-toggle="tooltip" title="Cost of employees who will change jobs">Cost of Employees Changing Jobs</h5>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_employee_job_change], precision: 0) %> </div>
+</div>

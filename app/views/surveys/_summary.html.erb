@@ -1,0 +1,19 @@
+<div class="results row">
+  	<div class="return-summary-container col-md-6 col-md-offset-3">
+  		<h3 class="summary-title">Your ROI Summary</h3>
+
+  		<h5 class="result-title" data-toggle="tooltip" title="Total Annual Costs of Incivility, Lack of Engagement, Destructive Leadership, and Lack of Constructive Leadership (Assumes 50% 'loss' from overlap between constructs, behavior and people that don't change)">Total Annual Costs</h5>
+  		<div class="calculated-result"> $<%= number_with_precision(@survey[:incivility_cost], precision: 2, delimiter: ',') %> </div>
+
+  		<h5 class="result-title" data-toggle="tooltip" title="Total Investment (does not include volume discounts for assessments, additional fees for workshops or training, additional coaching fees beyond debriefs, etc.)">Total Investment</h5>
+		<div class="calculated-result"> $<%= number_with_precision(@survey[:cs_investment], precision: 2, delimiter: ',') %> </div>
+
+		<h5 class="result-title" data-toggle="tooltip" title="Conservative; Against ONE YEAR OF COSTS Assumes small effects as indicated above; does not include ripple effects, such as health care, legal costs, additional human resources cost, replacement costs, etc.">Approximate ROI (%)</h5>
+		<div class="calculated-result"> <%= number_with_precision(@survey[:roi], precision: 2) %>% </div>
+
+		<h5 class="result-title" data-toggle="tooltip" title="Conservative; Assumes 1/10 of Total Annual Cost Eliminated In One Year, Linear Effect">Payback Period (months)</h5>
+		<div class="calculated-result"> <%= number_with_precision(@survey[:payback_period], precision: 0) %> </div>
+
+		<%= render 'buttons' %>
+  	</div>
+</div>
