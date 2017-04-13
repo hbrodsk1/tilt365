@@ -11,7 +11,7 @@
 	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_avoidance], precision: 2) %> </div>
 
 	<h5 class="detail-title" data-toggle="tooltip" title="Cost of employees who will experience a weakened sense of organizational commitment">Cost of Weakened Commitment</h5>
-	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_weak_commitment], precision: 0) %> </div>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_weak_commitment], precision: 2) %> </div>
 
 	<h5 class="detail-title" data-toggle="tooltip" title="Cost of employees who will intentionally reduce their efforts at work">Cost of Effort Reduction</h5>
 	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_effort_reduction], precision: 2, delimiter: ',') %> </div>
@@ -23,5 +23,5 @@
 	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_job_change_thoughts], precision: 2) %></div>
 
 	<h5 class="detail-title" data-toggle="tooltip" title="Cost of employees who will change jobs">Cost of Employees Changing Jobs</h5>
-	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_employee_job_change], precision: 0) %> </div>
+	<div class="calculated-detail"> $<%= number_with_precision(@survey[:cost_of_employee_job_change], precision: 2) %> </div>
 </div>
