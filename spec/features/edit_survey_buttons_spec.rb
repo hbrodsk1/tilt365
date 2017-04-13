@@ -5,7 +5,7 @@ RSpec.feature "edit.html.erb buttons", type: :feature do
 		@survey = FactoryGirl.create(:survey)
 
 		visit "/surveys/#{@survey.id}"
-		click_link("Recalculate Your Return")
+		first(:link, 'Recalculate Your Return').click
 
 		expect(page).to have_current_path(edit_survey_path(@survey))
 	end	
@@ -14,7 +14,7 @@ RSpec.feature "edit.html.erb buttons", type: :feature do
 		@survey = FactoryGirl.create(:survey)
 
 		visit "/surveys/#{@survey.id}"
-		click_link("Calculate A New Return")
+		first(:link, 'Calculate A New Return').click
 
 		expect(page).to have_current_path(new_survey_path)
 	end		

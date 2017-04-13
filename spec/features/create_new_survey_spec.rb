@@ -14,10 +14,10 @@ RSpec.feature "Create new survey", type: :feature do
 		fill_in('Constructive Leadership', with: @survey[:constructive_leadership])
 		fill_in('Additional ROCS Investment', with: @survey[:additional_rocs_investment])
 
-		click_button('Calculate Your Return')
+		first(:button, 'Calculate Your Return').click
 
-		expect(page).to have_link("Recalculate Your Return")
-		expect(page).to have_link("Calculate A New Return")
+		expect(page).to have_link("Recalculate Your Return", count: 2)
+		expect(page).to have_link("Calculate A New Return", count: 2)
 	end
 
 	scenario 'User creates survey with invalid data' do
@@ -33,7 +33,7 @@ RSpec.feature "Create new survey", type: :feature do
 		fill_in('Constructive Leadership', with: @invalid_survey[:constructive_leadership])
 		fill_in('Additional ROCS Investment', with: @invalid_survey[:additional_rocs_investment])
 
-		click_button('Calculate Your Return')
+		first(:button, 'Calculate Your Return').click
 
 		expect(page).to have_button("Calculate Your Return")
 	end	
